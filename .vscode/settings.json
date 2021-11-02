@@ -1,0 +1,4 @@
+{
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "python.formatting.provider": "black"
+}
