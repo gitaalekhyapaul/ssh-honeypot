@@ -61,8 +61,6 @@ Honeypots may also be put outside the external firewall facing the internet to d
 
 <div align="center"><h2><strong>Contributors 🤝</strong></h2></div>
 
----
-
 <table align="center">
 <tr align="center">
 <td>
@@ -113,5 +111,3 @@ Honeypots may also be put outside the external firewall facing the internet to d
 </table>
 
 ---
-
-<div align="center"><h1><strong>THANK YOU 🙏</strong></h1></div>
