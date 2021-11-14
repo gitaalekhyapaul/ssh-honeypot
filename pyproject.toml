@@ -2,7 +2,7 @@
 name = "ssh-honeypot"
 version = "1.0.0"
 description = "A basic SSH Honeypot"
-authors = ["Gita Alekhya Paul <54375111+gitaalekhyapaul@users.noreply.github.com>"]
+authors = ["Gita Alekhya Paul <54375111+gitaalekhyapaul@users.noreply.github.com>", "Nitish Chaturvedi <85406812+waterupto@users.noreply.github.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]

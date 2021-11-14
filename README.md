@@ -55,7 +55,7 @@ Honeypots may also be put outside the external firewall facing the internet to d
 
 ![Deployment Diagram](assets/Deployment-Diagram-Vertical.png)
 
-### **Installing the Honeypot**
+### **Installing and executing the Honeypot**
 
 The project uses Docker to containerize and package the application for easier deployments. To get started with installing and deploying the application, you might install Docker to refrain from managing the complexities of deployment or deploy it to your system without Docker. We will cover both ways:
 
@@ -117,8 +117,6 @@ The project uses Docker to containerize and package the application for easier d
     ```
 
   - The logs are available in the **`ssh-honeypot.log`** file in the project root.
-
-### **Executing the Honeypot**
 
 <div align="center"><h2><strong>Contributors 🤝</strong></h2></div>
 
