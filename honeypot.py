@@ -34,14 +34,16 @@ logging.basicConfig(
 
 def handle_cmd(cmd, chan, ip):
     """the function handling the different commands sent to the SSH server"""
-
     response = ""
-    if cmd == "ls":
-        response = "passwords.txt\n\rnot-a-honeypot.txt"
-    elif cmd == "pwd":
-        response = "/root"
-    elif cmd == "whoami":
-        response = "definitely-not-honeypot-root"
+    cmd = cmd.strip()
+    cmds = []
+    if isfile("cmd-directory.json"):
+        file = open("cmd-directory.json")
+        cmds = json.load(file)["commands"]
+    else:
+        raise Exception("Command directory file not found!")
+    if cmd in cmds:
+        response = cmds[cmd]
     else:
         response = f"sh: 1: {cmd.split()[0]}: not found"
 

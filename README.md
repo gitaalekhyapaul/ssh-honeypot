@@ -82,6 +82,12 @@ The project uses Docker to containerize and package the application for easier d
     sudo docker exec -it <INSTANCE_ID> bash
     ```
 
+  - To get Docker instance ID, type the following command (Requires root authentication in UNIX systems):
+
+    ```bash
+    sudo docker ps
+    ```
+
   - Head over to the **`ssh-honeypot.log`** in the instance project folder, and type the following command to monitor the log file:
 
     ```bash

@@ -1,0 +1,8 @@
+{
+  "commands": {
+    "ls": "passwords.txt\n\rnot-a-honeypot.txt",
+    "pwd": "/root",
+    "whoami": "definitely-not-honeypot-root",
+    "id": "uid=0(definitely-not-honeypot-root) gid=0(definitely-not-honeypot-root) groups=1000(user),0(definitely-not-honeypot-root),27(sudo)"
+  }
+}
