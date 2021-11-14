@@ -46,6 +46,9 @@ Honeypots may also be put outside the external firewall facing the internet to d
 <div align="center">
   <video width="700" alt="Demo Video" loop src="https://user-images.githubusercontent.com/54375111/141642253-db21b491-25cf-47ff-afa1-3fb655270e99.mp4" autoplay/>
 </div>
+<div align="center">
+  <video width="700" alt="Demo Video" loop src="https://raw.githubusercontent.com/gitaalekhyapaul/ssh-honeypot/main/assets/Demo-Video.mp4" autoplay/>
+</div>
 
 ### **Screenshots**
 
