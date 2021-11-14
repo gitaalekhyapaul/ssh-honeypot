@@ -32,7 +32,7 @@ Honeypots may also be put outside the external firewall facing the internet to d
 
 ### **Technology stack**
 
-- Python (Language if choice)
+- Python (Language of choice)
 - Poetry (Package manager)
 - Paramiko (SSHv2 implementation in Python)
 - Docker (Used for software containerization)
@@ -56,6 +56,61 @@ Honeypots may also be put outside the external firewall facing the internet to d
 ![Deployment Diagram](assets/Deployment-Diagram-Vertical.png)
 
 ### **Installing the Honeypot**
+
+The project uses Docker to containerize and package the application for easier deployments. To get started with installing and deploying the application, you might install Docker to refrain from managing the complexities of deployment or deploy it to your system without Docker. We will cover both ways:
+
+- **Installing with Docker:**
+
+  - To get started, install **Docker** to your system through the [**[LINK]**](https://docs.docker.com/engine/install/) on the Docker website.
+  - We will use **Docker Compose** on top of Docker to manage our application, you can install Docker Compose from the [**[LINK]**](https://docs.docker.com/compose/install/) on the Docker website.
+  - Once installed, head over to the project directory, and type the following commands to start the application (Requires root authentication in UNIX systems):
+
+    ```bash
+    sudo docker-compose up --build
+    ```
+
+  - Do not close the terminal, keep it open for the SSH server to be up, alteratively you can use the **`-d`** flag to the above command to run the app in 'detached' mode, which means to run it in the background.
+  - You can then SSH into the server at **`localhost:2222`** or **`127.0.0.1:2222`** by typing in the following command into a separate terminal (Requires **OpenSSH** installation):
+
+    ```bash
+    ssh localhost -p 2222
+    ```
+
+  - To view the log file, you will have to SSH into the Docker container, to SSH into the Docker container type the following commands (Requires root authentication in UNIX systems):
+
+    ```bash
+    sudo docker exec -it <INSTANCE_ID> bash
+    ```
+
+  - Head over to the **`ssh-honeypot.log`** in the instance project folder, and type the following command to monitor the log file:
+
+    ```bash
+    tail -f ssh-honeypot.log
+    ```
+
+- **Installing the old-fashioned way:**
+
+  - Install **Poetry**, which is the package manager we use to manage dependencies in the project by visiting this [**[LINK]**](https://python-poetry.org/docs/#installation) on Poetry's website.
+  - Once installed, head over to the project root, and type the following commands to install all project dependencies:
+
+    ```bash
+    poetry install
+    ```
+
+  - To start the server, you can type:
+
+    ```bash
+    poetry run python honeypot.py
+    ```
+
+  - Do not close the terminal, keep it open for the SSH server to be up.
+  - You can then SSH into the server at **`localhost:2222`** or **`127.0.0.1:2222`** by typing in the following command into a separate terminal (Requires **OpenSSH** installation):
+
+    ```bash
+    ssh localhost -p 2222
+    ```
+
+  - The logs are available in the **`ssh-honeypot.log`** file in the project root.
 
 ### **Executing the Honeypot**
 
